@@ -1,0 +1,78 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ardeaXcel Web Server: Demo1</title>
+        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="scripts/jquery-2.0.3.min1.js" type="text/javascript"></script>
+        <script src="scripts/ardeaXcel.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="./index.html">ardeaXcel Web Server</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="">
+                                <a href="./index.html">Home</a>
+                            </li>
+                            <li class="active">
+                                <a href="./demo1.html">demo1</a>
+                            </li>
+                            <li class="">
+                                <a href="./demo2.html">demo2</a>
+                            </li>
+                            <li class="">
+                                <a href="./demo3.html">demo3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>                        
+        <div class="container">
+            <div class="row ard-row-wrap" style="margin-top:100px">
+                <div class="span12 ard-row-title-wrap">
+                    Math
+                </div>
+                <div class="span12 ard-row-input-wrap">
+                    <input type="text" id="add1" value="10"/> + <input type="text" id="add2" value="3010"/> = <input type="text" id="resultAdd"/>
+                </div>
+                <div class="span12 ard-row-input-wrap">
+                    <button class="btn btn-success" onclick="countAdd()">calculate</button>
+                </div>                
+            </div>			
+            <div class="row ard-row-wrap">
+                <div class="span12 ard-row-title-wrap">
+                    Converter
+                </div>
+                <div class="span12 ard-row-input-wrap">
+                    Please select unit <select id="choose_unit"></select>
+                </div>                    
+                <div class="span12 ard-row-input-wrap" style="margin-left: 200px;">
+                    <div class="span2">
+                        <input type="text" id="unit_val1" value="10"/>    
+                    </div>
+                    <div class="span2">
+                        <select id="choose_unit_from"></select>
+                    </div>                                        
+                    <div class="span2">
+                        <select id="choose_unit_to"></select>
+                    </div>                                                            
+                    <div class="span2">
+                        <input type="text" id="unit_val2"/>    
+                    </div>                    
+                </div>                        
+            </div>		
+
+        </div>
+    </body>
+    <script src="scripts/demo1.js" type="text/javascript"></script>        
+</html>

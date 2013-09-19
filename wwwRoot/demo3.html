@@ -1,0 +1,130 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ardeaXcel Web Server: Demo3</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/demo3.css" rel="stylesheet">
+
+        <script src="scripts/jquery-2.0.3.min1.js" type="text/javascript"></script>
+        <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
+        <script src="scripts/ardeaXcel.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="./index.html">ardeaXcel Web Server</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="">
+                                <a href="./index.html">Home</a>
+                            </li>
+                            <li class="">
+                                <a href="./demo1.html">demo1</a>
+                            </li>
+                            <li class="">
+                                <a href="./demo2.html">demo2</a>
+                            </li>
+                            <li class="active">
+                                <a href="./demo3.html">demo3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+        <div class="container" style="padding-top:60px">
+            <h2>LIFETME SAVINGS (LOSSES) BY CHANGING PRODUCT BRANDS</h2>
+            <p>
+                this module taken from <a href="http://www.spreadsheetzone.com/272/Net-Single-Premium-and-Annual-Costs.html">http://www.spreadsheetzone.com/272/Net-Single-Premium-and-Annual-Costs.html</a><br/>
+                and porting to html page by MA for demo ardeaXcel Webserver
+            </p>            
+            <p>
+                This template is prepared to emphasize the impact of using a cheaper product brand rather than the one you are using currently in long term savings. 
+            </p>
+            <div class="bs-docs-example net-single-premium">
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="age">Interest Rate </label>
+                        <div class="controls">
+                            <input type="text" id="inputIntRate" placeholder="0.03" value="0.03">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="age">Age</label>
+                        <div class="controls">
+                            <select id="inputAge"></select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="type-insurance">Type of Insurance</label>
+                        <div class="controls">
+                            <select id="inputTypeOfInsurance"></select>
+                        </div>
+                    </div>                    
+                    <div class="control-group">
+                        <label class="control-label" for="payment">Age</label>
+                        <div class="controls">
+                            <input type="text" id="inputPayment" placeholder="50000" value="50000">
+                        </div>
+                    </div>                    
+                </form>                
+            </div>
+            <div class="bs-docs-example annual-cost">
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="begin-age">Beginning Age</label>
+                        <div class="controls">
+                            <input type="text" id="inputBeginAge" placeholder="30" value="30">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="cost">Policy Cost</label>
+                        <div class="controls">
+                            <input type="text" id="inputCost" placeholder="5000" value="5000">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="payment-age">First Payment Age</label>
+                        <div class="controls">
+                            <input type="text" id="inputPaymentAge" placeholder="55" value="55">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="interest-rate-annual">Interest Rate</label>
+                        <div class="controls">
+                            <input type="text" id="inputIntRateAnnual" placeholder="0.03" value="0.03">
+                        </div>
+                    </div>                    
+                </form>                
+            </div>            
+            <div class="bs-docs-example doc-result">
+                        <div class="span5 left-col">
+                            <div class="box-wrap" style="margin-top: 10px;">
+                                <div class="box-top" id="title-inv-retire"> Net Single Premium</div>
+                                <div class="box-bottom" id="val-net-single"></div>
+                            </div>                                                                    
+                        </div>
+                        <div class="span5 right-col">
+                            <div class="box-wrap" style="margin-top: 10px;">
+                                <div class="box-top" id="title-after-retire">Annual Cost</div>
+                                <div class="box-bottom" id="val-annual-cost"></div>
+                            </div>                                                                                                
+                        </div>                                        
+            </div>
+        </div>                        
+    </div>
+
+
+
+</body>
+<script src="scripts/demo3.js" type="text/javascript"></script>
+</html>

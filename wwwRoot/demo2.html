@@ -1,0 +1,181 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ardeaXcel Web Server: Demo2</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/demo2.css" rel="stylesheet">
+
+        <script src="scripts/jquery-2.0.3.min1.js" type="text/javascript"></script>
+        <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
+        <script src="scripts/highchart/highcharts.js" type="text/javascript"></script>
+        <script src="scripts/highchart/highcharts.js" type="text/javascript"></script>
+        <script src="scripts/ardeaXcel.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="./index.html">ardeaXcel Web Server</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="">
+                                <a href="./index.html">Home</a>
+                            </li>
+                            <li class="">
+                                <a href="./demo1.html">demo1</a>
+                            </li>
+                            <li class="active">
+                                <a href="./demo2.html">demo2</a>
+                            </li>
+                            <li class="">
+                                <a href="./demo3.html">demo3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+        <div class="container" style="padding-top:60px">
+            <h2>LIFETME SAVINGS (LOSSES) BY CHANGING PRODUCT BRANDS</h2>
+            <p>
+                this module taken from <a href="http://www.spreadsheetzone.com/169/Lifetime-Savings-Calculator.html">http://www.spreadsheetzone.com/169/Lifetime-Savings-Calculator.html</a><br/>
+                and porting to html page by MA for demo ardeaXcel Webserver
+            </p>            
+            <p>
+                This template is prepared to emphasize the impact of using a cheaper product brand rather than the one you are using currently in long term savings. 
+            </p>
+            <div class="bs-docs-example docs-age">
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="age">Your Age:</label>
+                        <div class="controls">
+                            <input type="text" id="inputAge" placeholder="20" value="20">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="retire-age">Retirement Age:</label>
+                        <div class="controls">
+                            <input type="text" id="inputRetireAge" placeholder="55" value="55">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="target-age">Target Age:</label>
+                        <div class="controls">
+                            <input type="text" id="inputTargetAge" placeholder="70" value="70">
+                        </div>
+                    </div>                    
+                </form>                
+            </div>
+            <div class="bs-docs-example docs-product">
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="unit-price-brand">Unit price of the product brand you are using currently:</label>
+                        <div class="controls">
+                            <input type="text" id="inputUnitPriceBrand" placeholder="20" value="20">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="unit-price-cheap">Unit price of a cheaper product brand you may use:</label>
+                        <div class="controls">
+                            <input type="text" id="inputUnitPriceCheap" placeholder="12" value="12">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="often">How often do you use the product?</label>
+                        <div class="controls custom1" >
+                            <input type="text" id="inputOften" placeholder="1" value="1">
+                        </div>
+                        <label class="control-label" for="times">times</label>
+                        <div class="controls">
+                            <select  id="inputTimes" style="margin-left:5px;"></select>
+                        </div>                        
+                    </div>                    
+                </form>                
+            </div>            
+            <div class="bs-docs-example docs-result">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active"><a href="#saving-content" data-toggle="tab">Saving</a></li>
+                    <li><a href="#invest-content" data-toggle="tab">Investment</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in active" id="saving-content">
+                        <div class="span3 left-col">
+                            <div class="wrap-left-col">
+                                <div class="box-wrap" style="margin-top: 115px;">
+                                    <div class="box-top" id="title-before-retire">Savings before Retirement</div>
+                                    <div class="box-bottom" id="val-before-retire"></div>
+                                </div>
+                                <div class="box-wrap" style="margin-top: 70px;">
+                                    <div class="box-top" id="title-during-retire">Savings during Retirement</div>
+                                    <div class="box-bottom" id="val-during-retire"></div>
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="span8 right-col">
+                            <div class="row1">
+                                <div class="span3 custom2">
+                                    <div class="box-wrap" style="margin-top: 10px;">
+                                        <div class="box-top" id="title-per-purchase">Savings per purchase</div>
+                                        <div class="box-bottom" id="val-per-purchase"></div>
+                                    </div>                                                                    
+                                </div> 
+                                <div class="span3 custom2">
+                                    <div class="box-wrap" style="margin-top: 10px;">
+                                        <div class="box-top" id="title-per-month">Savings per month</div>
+                                        <div class="box-bottom" id="val-per-month"></div>
+                                    </div>                                                                    
+                                </div> 
+                                <div class="span3 custom2">
+                                    <div class="box-wrap" style="margin-top: 10px;">
+                                        <div class="box-top" id="title-per-year">Savings per year</div>
+                                        <div class="box-bottom" id="val-per-year"></div>
+                                    </div>                                                                    
+                                </div>                                 
+                            </div>
+                            <div class="row2">
+                                <div id="container-chart" style="min-width: 310px; height: 250px; margin: 0 auto"></div>
+
+                                </body>                                
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="tab-pane fade" id="invest-content">
+                        <div class="span5 left-col">
+                            <form class="form-horizontal">
+                                <div class="control-group" style="margin-top: 60px">
+                                    <label class="control-label" for="rate"> Expected Annual Interest Rate:</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputRate" placeholder="8" value="8" style="width: 50px"> %
+                                    </div>
+                                </div>
+                            </form>                                            
+                        </div>
+                        <div class="span6 right-col">
+                            <div class="box-wrap" style="margin-top: 35px;">
+                                <div class="box-top" id="title-inv-retire"> Exp'd Value of the Investment at  retirement age:</div>
+                                <div class="box-bottom" id="val-inv-retire"></div>
+                            </div>                                                                    
+                            <div class="box-wrap" style="margin-top: 50px;">
+                                <div class="box-top" id="title-after-retire"> After retiring, monthly return of your investment until target age: </div>
+                                <div class="box-bottom" id="val-after-retire"></div>
+                            </div>                                                                                                
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>                        
+    </div>
+
+
+
+</body>
+<script src="scripts/demo2.js" type="text/javascript"></script>
+</html>
