@@ -12,7 +12,7 @@ Requirements:
 
 Todo:    
 1. Open file ardeaXcel-webserver-v.1.xlsm (MS Excel 2007 or later) or ardeaXcel-webserver-v.1.xls (for MS Excel 2003), 
-   don't forget enable macro first.
+   don't forget enable macro first.   
 2. Set location static www-root on setting sheet.   
 3. click green save button   
 4. goto sheet main and click start button   
