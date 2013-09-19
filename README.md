@@ -11,11 +11,13 @@ Requirements:
 2. MS Excel    
 
 Todo:    
-1. Set location static www-root on setting sheet.   
-2. click green save button   
-3. goto sheet main and click start button   
-4. goto your browser and open the demo (ex. http://localhost:8087)   
-5. see the demo :)   
+1. Open file ardeaXcel-webserver-v.1.xlsm (MS Excel 2007 or later) or ardeaXcel-webserver-v.1.xls (for MS Excel 2003), 
+   don't forget enable macro first.
+2. Set location static www-root on setting sheet.   
+3. click green save button   
+4. goto sheet main and click start button   
+5. goto your browser and open the demo (ex. http://localhost:8087)   
+6. see the demo :)   
   
 ::enjoy::   
 
