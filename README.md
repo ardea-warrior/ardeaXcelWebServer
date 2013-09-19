@@ -6,7 +6,7 @@ your excel file on the web or you can access it as bussiner layer for your web a
 you can connect with curl.
 
 
-Requrements:  
+Requirements:  
 1. Windows Operationg System    
 2. MS Excel    
 
